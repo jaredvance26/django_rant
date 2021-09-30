@@ -1,0 +1,14 @@
+
+{% extends "blog/base.html" %}
+{% block content %}
+    <article class="media content-section">
+        <div>
+            <h2>{{ object.title }}</h2>
+            <p class="author-date"><strong>By {{ object.author }} on {{ object.dated_posted | date:"F j, Y"}}</strong></p>
+            <p class="post-rant"> {{ object.content }}</p>
+        <div>
+    </article>
+
+    <a href={% url 'blog-home'%}>See your post here</a>
+
+{% endblock content %}
